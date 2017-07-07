@@ -21,7 +21,8 @@ Download and unpack the driver
     wget http://download.dymo.com/Download%20Drivers/Linux/Download/dymo-cups-drivers-1.4.0.tar.gz
     tar xvf dymo-cups-drivers-1.4.0.tar.gz
 
-> You can check for newer version of the driver directly from [Dymo](http://www.dymo.com/en-US/online-support/dymo-user-guides)
+> You can check for newer version of the driver directly from [Dymo](http://www.dymo.com/en-US/online-support/dymo-user-guides)  
+You can also get it from [here](dymo-cups-drivers-1.4.0.tar.gz)
 
 
 Compile and install the driver:
