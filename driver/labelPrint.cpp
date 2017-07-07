@@ -3,6 +3,7 @@
   https://community.ubnt.com/t5/UniFi-Wireless/RPI-Dashbutton-Turn-RaspberryPI-with-Dymo-LabelWriter-into-a/td-p/1667513
   Copyright belongs to its author
 
+  Changes: Copyright (c) 2017 Agilent Technologies
 */
 
 #include <iostream>
@@ -35,20 +36,19 @@ int main(int argc, char** argv)
 {
   try
   {
-    if (argc < 2)
-      throw Error("Usage: PrintLabel <ImageName> [<ImageName> ...]");
+    if (argc != 3)
+      throw Error("Usage: PrintLabel <ImageName> <pagesize>");
 
-    int             num_options = 0;
+    int num_options = 0;
     cups_option_t*  options = NULL;
 
-    num_options = cupsAddOption("PageSize", "w215h120", num_options, &options);
+    num_options = cupsAddOption("PageSize", argv[2], num_options, &options);
     num_options = cupsAddOption("scaling", "100", num_options, &options);
     num_options = cupsAddOption("DymoHalftoning", "ErrorDiffusion", num_options, &options);
     num_options = cupsAddOption("DymoPrintQuality", "Graphics", num_options, &options);
 
-    for (int i=1; i<argc; i++) {
-      cupsPrintFile(PrinterName, argv[i], "Label", num_options, options);
-    }
+    cupsPrintFile(PrinterName, argv[1], "Label", num_options, options);
+
     cupsFreeOptions(num_options, options);
 
     return 0;
