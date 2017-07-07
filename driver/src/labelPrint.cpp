@@ -4,6 +4,8 @@
   Copyright belongs to its author
 
   Changes: Copyright (c) 2017 Agilent Technologies
+
+  License: GPL V2
 */
 
 #include <iostream>
