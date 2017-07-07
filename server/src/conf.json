@@ -1,0 +1,4 @@
+{
+  "port": 8082,
+  "ping": "http://my.web.server"
+}
