@@ -47,7 +47,7 @@ Configure the driver:
 
 # Command line
 We'll now create a CLI that will be used by our web service  
-Copy [labelPrint.cpp](labelPrint.cpp) to the dymo folder
+Copy [labelPrint.cpp](src/labelPrint.cpp) to the dymo folder
 
 Compile the CLI:
 
