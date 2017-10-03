@@ -69,11 +69,11 @@ See [here](./driver)
 [PM2](http://pm2.keymetrics.io) is installed to manage the Service  
 A web service was created to print labels  
 
-See [here](./server)
+See [here](./service)
 
 ## Labels
 [Apache httpd](https://httpd.apache.org) is installed and configured to host the label generation service  
 A Web page was created to generate and display labels. The data to transferred as GET parameters
 The configuration of the different labels are in a json file
 
-See [here](./labels)
+See [here](./www)
