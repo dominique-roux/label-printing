@@ -1,0 +1,49 @@
+{
+  "printService" : "http://raspberrypi.france.agilent.com/print/print/",
+  "labels" : [
+    {
+      "name": "Adress",
+      "label":"w118h252",
+      "width": 82,
+      "height": 38,
+      "border":true,
+      "elements": [
+        {
+          "type": "text",
+          "content": "label",
+          "x": 2,
+          "y": 2,
+          "w": 68,
+          "fontSize" : 4
+        }
+      ]
+    },
+    {
+      "name": "QR Code",
+      "label":"w118h252",
+      "width": 82,
+      "height": 38,
+      "border":true,
+      "elements": [
+        {
+          "type": "qrcode",
+          "content": "qr",
+          "x": 2,
+          "y": 2,
+          "h":34,
+          "w":34
+        },
+        {
+          "type": "text",
+          "content": "label",
+          "x": 38,
+          "y": 2,
+          "w": 60,
+          "fontSize" : 3
+        }
+      ]
+    }
+  ]
+
+
+}

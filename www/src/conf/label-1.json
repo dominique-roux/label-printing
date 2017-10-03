@@ -1,0 +1,58 @@
+{
+  "printService" : "http://raspberrypi.france.agilent.com/print/print/",
+  "labels" : [
+    {
+      "name": "Adress short",
+      "label":"w118h252",
+      "width": 82,
+      "height": 38,
+      "border":false,
+      "elements": [
+        {
+          "type": "text",
+          "content": "label",
+          "x": 2,
+          "y": 2,
+          "w": 78,
+          "fontSize" : 5
+        }
+      ]
+    },
+    {
+      "name": "Adress",
+      "label":"w118h252",
+      "width": 82,
+      "height": 38,
+      "border":false,
+      "elements": [
+        {
+          "type": "text",
+          "content": "label",
+          "x": 2,
+          "y": 2,
+          "w": 78,
+          "fontSize" : 4
+        }
+      ]
+    },
+    {
+      "name": "Adress Long",
+      "label":"w118h252",
+      "width": 82,
+      "height": 38,
+      "border":false,
+      "elements": [
+        {
+          "type": "text",
+          "content": "label",
+          "x": 2,
+          "y": 2,
+          "w": 78,
+          "fontSize" : 3
+        }
+      ]
+    }
+  ]
+
+
+}
