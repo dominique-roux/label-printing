@@ -59,6 +59,8 @@ Then we need to install the following libs:
 	npm install express
 	npm install body-parser
 	npm install child_process
+  npm install console-stamp
+
 
 Start the service and save the configuration
 
