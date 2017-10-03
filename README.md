@@ -72,8 +72,8 @@ A web service was created to print labels
 
 ## Labels
 [Apache httpd](https://httpd.apache.org) is installed and configured to host the label generation service  
-A Web page was created to generate and display labels. The data to transferred as GET parameters
-The configuration of the different labels are in a json file
+A Web page was created to generate and display labels. The data to transferred as GET parameters  
+The configuration of the different labels are in a json file  
 
 # Installation
 The installation / Configuration is made of 4 steps:
