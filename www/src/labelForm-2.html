@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<title>Label</title>
+		<!-- JQuery-->
+		<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+		<!-- Bootstrap-->
+  	<link rel="stylesheet" href="./css/bootstrap-3.3.7.min.css">
+  	<script type="text/javascript" src="./js/bootstrap-3.3.7.min.js"></script>
+	</head>
+
+<body>
+	<form action="label.html" method="get">
+		<!-- Hidden parameter: config file-->
+		<input type="hidden" name="config" value="label-2.json">
+
+		<!-- Parameter: qr-->
+    <label for="qr">QR Code:</label>
+    <input name="qr" type="text" class="form-control" id="qr" placeholder="Enter value to be displayed in the QR Code">
+
+		<!-- Parameter: label-->
+		<label for="text">Label</label>
+	  <textarea name="label" class="form-control" rows="5" id="comment" placeholder="Enter text to print"></textarea>
+
+		<!-- submit button-->
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</body>
+</html>
