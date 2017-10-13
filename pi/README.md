@@ -1,14 +1,14 @@
 # Overview
 You can find a lot of documentation on Internet. For example [here](https://www.raspberrypi.org/documentation/)  
 You need to:
-- Install Raspbian
-- Configure it:
- - Enable ssh
- - Obtain IP address
- - Change server name
- - Change password
- - Configure Samba
-- Create an image
+* Install Raspbian
+* Configure it:
+  * Enable ssh
+  * Obtain IP address
+  * Change server name
+  * Change password
+  * Configure Samba
+* Create an image
 
 # Install Raspbian
 Download [Noobs](https://www.raspberrypi.org/downloads/noobs/) and unzip it on the sd card.

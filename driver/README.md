@@ -4,8 +4,8 @@ I worked from [this](https://community.ubnt.com/t5/UniFi-Wireless/RPI-Dashbutton
 Everything within the folder and subfolders is under **GPL V2** because it is built with the Dymo® Driver which is under GPL V2
 
 It is made of three steps:
-- Install the printing system (CUPS)
-- Download, compile, install and configure Dymo Drive
+* Install the printing system (CUPS)
+* Download, compile, install and configure Dymo Drive
 -Download and compile the command line
 
 # Install Cups
