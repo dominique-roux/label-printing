@@ -1,5 +1,5 @@
 {
-  "printService" : "http://raspberrypi.france.agilent.com/print/print/",
+  "printService" : "http://myserver/print/print/",
   "labels" : [
     {
       "name": "Adress",
