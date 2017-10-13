@@ -1,7 +1,7 @@
 # Table of Contents
-1. [Introduction](#Introduction)
-2. [Architecture](#Architecture)
-3. [Installation](#Installation)
+1. [Introduction](#introduction)
+2. [Architecture](#architecture)
+3. [Installation](#installation)
 
 # Introduction
 The purpose of this project is to allow to easily generate labels (including QR codes) and print them directly on a [Dymo® LabelWriter® 450 printer](http://www.dymo.com/en-US/labelwriter-450-label-printer)
