@@ -50,7 +50,7 @@ Create the following folders on the pi:
 Copy the following files to "service" folder:  
 - [labelPrinter.js](src/labelPrinter.js)
 - [conf.json](src/conf.json)
-- TODO: Driver
+- The driver compiled just before
 
 ## Install Dependancies
 Then we need to install the following libs:
