@@ -6,7 +6,7 @@ Everything within the folder and subfolders is under **GPL V2** because it is bu
 It is made of three steps:
 * Install the printing system (CUPS)
 * Download, compile, install and configure Dymo Drive
--Download and compile the command line
+* Download and compile the command line
 
 # Install Cups
     sudo apt-get update
@@ -14,7 +14,7 @@ It is made of three steps:
 
 # Install Dymo® Driver
 ## Download
-Create the following folders on the pi:
+Create the following folders on the pi and go to the "driver" folder:
 
     |_ home
       |_ pi
