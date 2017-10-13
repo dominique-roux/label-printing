@@ -1,12 +1,8 @@
-# Update apt
-Update apt-get database:
-
-    sudo apt-get update  
-
-
 # Apache httpd
+## Installation
 Install Apache and mod_proxy:
 
+    sudo apt-get update  
     sudo apt-get install apache2
     sudo apt-get install libapache2-mod-proxy-html
 
@@ -14,11 +10,23 @@ Activate mod_proxy
 
     sudo a2enmod proxy_http
 
-Proxify node js (on port 8080)
+## Configuration
+Edit the configuration file
 
     sudo nano  /etc/apache2/sites-enabled/000-default.conf
 
-Add the configuration:
+Create an alias for the label pages
+
+    Alias /label "/home/pi/label/www"
+    <Directory "/home/pi/label/www">
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      Allow from all
+      Require all granted
+    </Directory>
+
+Create a proxy for the service:
+
     #Route /print to node.js ws
     ProxyPreserveHost On
 
@@ -26,50 +34,31 @@ Add the configuration:
     ProxyPassReverse /print http://0.0.0.0:8082/api/
 
 
-    Add the configuration:
-
-Restart httpd:
+Save the file and restart httpd:
 
     sudo service apache2 restart
 
+# Labels
+## Copy files
+Create the following folders on the pi:
 
-# Samba
-This is not required but very convenient
+    |_ home
+      |_ pi
+        |_ label
+          |_ www
 
-## Installation
-    sudo apt-get install samba samba-common-bin
+
+Copy the content of the [src](src) to the "www" folder
 
 ## Configuration
-Edit the configuration files
+Configure the labels in:
 
-    sudo vi /etc/samba/smb.conf
+    |_ home
+      |_ pi
+        |_ label
+          |_ www
+            |_ conf
 
-Make sure the wins support is activated:
+Change the permissions to make it accessible by httpd
 
-    wins support = yes
-
-add the following section:
-
-	[www]
-		comment= www Home
-		path=/var/www/html
-		browseable=Yes
-		writeable=Yes
-		only guest=no
-		create mask=0777
-		directory mask=0777
-		public=no
-
-Set the password:
-
-	sudo smbpasswd -a pi
-
-And restart the service
-
-	sudo smbd restart
-
-# TODO
-  sudo chmod  -R a+x www/
-  sudo chmod  -R a+r www/
-  chmod o+x /home/pi/
-  chmod o+x /home/pi/label/
+    chmod 755 -R /home/pi/label/
