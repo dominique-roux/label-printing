@@ -32,7 +32,7 @@ function loadConfig() {
 				var paramName = element.content
 				var value  = getParameterByName(paramName)
 				if ( element.type =="text") {
-					addText(i, value, element.x, element.y, element.w, element.fontSize)
+					addText(i, value, element.x, element.y, element.w, element.fontSize,element.max_lines)
 				}
 				if ( element.type =="qrcode") {
 					addQrCode(i, value, element.x, element.y, element.h, element.w)
@@ -200,7 +200,7 @@ function drawBorder(id) {
 	}
 }
 
-function addText(id, text, x, y, w, fontsize) {
+function addText(id, text, x, y, w, fontsize, max_lines) {
 	divId = "label_"+id
 	canvasId = "canvas_"+divId
 
@@ -209,7 +209,11 @@ function addText(id, text, x, y, w, fontsize) {
 	ctx.font = (fontsize*r)+"px Arial"
 	textLines = splitText(ctx,text,w*r)
 
-	for (var i = 0; i < textLines.length; i++) {
+	var max = textLines.length;
+	if (max > max_lines){
+		max = max_lines
+	}
+	for (var i = 0; i < max; i++) {
 		ctx.fillText(textLines[i], x*r, (y + (fontsize*1.1)*(i+1))*r);
 	}
 }
