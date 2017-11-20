@@ -45,20 +45,22 @@ int main(int argc, char** argv)
     cups_option_t*  options = NULL;
 
     num_options = cupsAddOption("PageSize", argv[2], num_options, &options);
-    num_options = cupsAddOption("scaling", "100", num_options, &options);
+    //num_options = cupsAddOption("scaling", "100", num_options, &options);
     num_options = cupsAddOption("DymoHalftoning", "ErrorDiffusion", num_options, &options);
     num_options = cupsAddOption("DymoPrintQuality", "Graphics", num_options, &options);
 
     cupsPrintFile(PrinterName, argv[1], "Label", num_options, options);
 
     cupsFreeOptions(num_options, options);
+    fprintf(stdout, "Printed\n");
 
     return 0;
   }
   catch(std::exception& e)
   {
-    fprintf(stderr, "%s", e.what());
-    fprintf(stderr, "\n");
+    fprintf(stdout, "Printer sent an error\n");
+    fprintf(stdout, "%s", e.what());
+    fprintf(stdout, "\n");
     return 1;
   }
 }
