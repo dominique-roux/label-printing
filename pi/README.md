@@ -44,6 +44,11 @@ You can do it using  raspi-config:
 4. Enter the name you want
 5. Select **Ok**
 
+Alternatively edit file /etc/hostname and change the name directly
+
+    sudo nano /etc/hostname
+    sudo /etc/init.d/hostname.sh
+    sudo reboot
 
 ## Change password
 The default user is **pi**  
@@ -60,7 +65,7 @@ You can do it using  raspi-config:
 
 # Samba
 ## Installation
-    sudo-apt-get update
+    sudo apt-get update
     sudo apt-get install samba samba-common-bin
 
 ## Configuration
@@ -97,3 +102,5 @@ And restart the service
 
 # Create an image
 Once the configuration is finished, it is recommended to make an image of the SD card to facilitate restoration.
+
+https://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/
