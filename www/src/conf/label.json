@@ -1,0 +1,57 @@
+{
+  "printService" : "http://myserver/print/print/",
+  "labels" : [
+    {
+      "name": "0.5 mL tube",
+      "label":"w72h154",
+      "width": 55,
+      "height": 23,
+      "border":false,
+      "elements": [
+        {
+          "type": "qrcode",
+          "content": "qr",
+          "x": 0.6,
+          "y": 10.85,
+          "h":6.9,
+          "w":6.9
+        },
+        {
+          "type": "text",
+          "content": "label",
+          "x": 12.7,
+          "y": 6.3,
+          "w": 22,
+          "fontSize" : 2.4,
+          "max_lines": 5
+        }
+      ]
+    },
+    {
+      "name": "2 mL tube",
+      "label":"w72h154",
+      "width": 55,
+      "height": 23,
+      "border":false,
+      "elements": [
+        {
+          "type": "qrcode",
+          "content": "qr",
+          "x": 0.6,
+          "y": 10.85,
+          "h":6.9,
+          "w":6.9
+        },
+        {
+          "type": "text",
+          "content": "label",
+          "x": 12.7,
+          "y": 6.3,
+          "w": 35,
+          "fontSize" : 2.4,
+          "max_lines": 5
+        }
+      ]
+    }
+  ]
+}
